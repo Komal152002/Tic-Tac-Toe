@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe Game</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="sta.css" />
+  </head>
+  <body class="text-center p-4">
+    <!-- Winner Modal -->
+    <div
+      class="modal fade"
+      id="winnerModal"
+      tabindex="-1"
+      aria-labelledby="winnerModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-success text-white">
+          <div class="modal-header">
+            <h5 class="modal-title" id="winnerModalLabel">🎉 Congratulations!</h5>
+          </div>
+          <div class="modal-body">
+            <p id="msg" class="fs-4 fw-bold"></p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-light"
+              data-bs-dismiss="modal"
+              id="new-btn"
+            >
+              New Game
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <h1 class="mb-4">Tic Tac Toe</h1>
+      <div class="container">
+        <div class="game d-grid gap-2" style="grid-template-columns: repeat(3, 100px);">
+          <button class="box btn btn-outline-primary fs-2"></button>
+          <button class="box btn btn-outline-primary fs-2"></button>
+          <button class="box btn btn-outline-primary fs-2"></button>
+          <button class="box btn btn-outline-primary fs-2"></button>
+          <button class="box btn btn-outline-primary fs-2"></button>
+          <button class="box btn btn-outline-primary fs-2"></button>
+          <button class="box btn btn-outline-primary fs-2"></button>
+          <button class="box btn btn-outline-primary fs-2"></button>
+          <button class="box btn btn-outline-primary fs-2"></button>
+        </div>
+      </div>
+      <button class="btn btn-danger mt-4" id="reset-btn">Reset Game</button>
+    </main>
+
+    <!-- Bootstrap & Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
